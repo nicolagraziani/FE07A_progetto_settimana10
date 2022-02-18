@@ -1,0 +1,11 @@
+<div>
+    <input type="text" (input)="readNewToDo($event)" />
+    <button type="button" (click)="newToDo()"><span>+</span></button>
+  <p *ngIf="loading">Caricamento...</p>
+  <p *ngIf="(!toDoList.length && !loading)">Aggiungi nuove task</p>
+  <ul>
+    <li *ngFor="let todo of toDoList">
+      {{todo.title}} <a (click)="newCheck(todo)">✔</a>
+    </li>
+  </ul>
+</div>

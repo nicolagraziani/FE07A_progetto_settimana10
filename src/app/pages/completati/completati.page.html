@@ -1,0 +1,7 @@
+<div>
+  <p *ngIf="loading">Caricamento...</p>
+  <p *ngIf="(!toDoCompleted.length && !loading)">Non sono presenti task completate</p>
+  <ul>
+    <li *ngFor="let todo of toDoCompleted">{{todo.title}}</li>
+  </ul>
+</div>
